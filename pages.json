@@ -1,0 +1,84 @@
+{
+	"easycom": {
+		"^u-(.*)": "@/ui/uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [
+		{
+			"path": "pages/watermark/index",
+			"style": {
+				"disableScroll": true,
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/index/index",
+			"style": {
+				"disableScroll": true,
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/frame/index",
+			"style": {
+				"disableScroll": true,
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/mine/mine",
+			"style": {
+				"navigationBarTitleText": "我的",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/mine/about",
+			"style": {
+				"navigationBarTitleText": "关于我们"
+			}
+		},
+		{
+			"path": "pages/mine/instructions",
+			"style": {
+				"navigationBarTitleText": "使用说明"
+			}
+		},
+		{
+			"path": "pages/mine/problem",
+			"style": {
+				"navigationBarTitleText": "常见问题"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "魔力视频去水印",
+		"navigationBarBackgroundColor": "#FFF",
+		"backgroundColor": "#C12928"
+	},
+	"tabBar": {
+		"color": "#333333",
+		"selectedColor": "#ff5377",
+		"backgroundColor": "#fff",
+		"borderStyle": "white",
+		"list": [{
+				"pagePath": "pages/watermark/index",
+				"text": "去水印",
+				"iconPath": "static/tabBar/home.png",
+				"selectedIconPath": "static/tabBar/home_selected.png"
+			},
+			{
+				"pagePath": "pages/index/index",
+				"text": "头像挂件",
+				"iconPath": "static/tabBar/kefu.png",
+				"selectedIconPath": "static/tabBar/kefu_selected.png"
+			},
+			{
+				"pagePath": "pages/mine/mine",
+				"text": "个人中心",
+				"iconPath": "static/tabBar/member.png",
+				"selectedIconPath": "static/tabBar/member_selected.png"
+			}
+		]
+	}
+}
