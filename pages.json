@@ -52,7 +52,7 @@
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "魔力视频去水印",
+		"navigationBarTitleText": "琳琳去水印",
 		"navigationBarBackgroundColor": "#FFF",
 		"backgroundColor": "#C12928"
 	},
@@ -63,7 +63,7 @@
 		"borderStyle": "white",
 		"list": [{
 				"pagePath": "pages/watermark/index",
-				"text": "去水印",
+				"text": "图片提取",
 				"iconPath": "static/tabBar/home.png",
 				"selectedIconPath": "static/tabBar/home_selected.png"
 			},
