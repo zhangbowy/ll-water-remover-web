@@ -3,6 +3,12 @@
 		<image src="https://picsum.photos/750/360" class="all-back" mode="aspectFill"></image>
 		<view class="wrapper">
 			<u-input v-model="pasteValue" type="text" :border="true" placeholder="粘贴小红书链接，提取无水印图片" />
+			<view class="example-section" v-if="!pasteValue">
+				<view class="example-item" v-for="(item, idx) in examples" :key="idx" @click="fillExample(item.text)">
+					<text class="example-label">示例{{idx + 1}}：</text>
+					<text class="example-text">{{item.label}}</text>
+				</view>
+			</view>
 			<view class="btn-wrap">
 				<u-button type="primary" size="medium" @click="paste">粘贴链接</u-button>
 				<u-button type="success" size="medium" @click="fetchImages">提取图片</u-button>
@@ -77,7 +83,17 @@ export default {
 			video_title: "",
 			showVideo: false,
 			tempFilePath: "",
-			saveProgress: 0
+			saveProgress: 0,
+			examples: [
+				{
+					label: '🇩🇪但凡懂点中文也不会拿这个车牌号 笑死😆',
+					text: '🇩🇪但凡懂点中文也不会拿这个车牌号 笑死😆 http://xhslink.com/o/8qg6LcQg75G'
+				},
+				{
+					label: 'Wallpaper｜ins感壁纸 森林的尽头是散落的光',
+					text: 'Wallpaper｜ins感壁纸 森林的尽头是散落的光 http://xhslink.com/o/1ogZRti0O17'
+				}
+			]
 		}
 	},
 	onLoad() {},
@@ -98,6 +114,10 @@ export default {
 	methods: {
 		NavigateTos(urls) {
 			uni.navigateTo({ url: urls })
+		},
+		fillExample(text) {
+			this.pasteValue = text
+			uni.showToast({ title: '已填入，点击提取图片', icon: 'none', duration: 1500 })
 		},
 		paste() {
 			const that = this

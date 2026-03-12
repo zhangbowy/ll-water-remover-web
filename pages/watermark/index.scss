@@ -5,10 +5,10 @@
 	overflow-y: auto;
 	.all-back {
 		width: 750rpx;
-		height: 24%rpx;
+		height: 240rpx;
 	}
 	.wrapper {
-		height: 76%;
+		min-height: calc(100% - 240rpx + 70rpx);
 		overflow-y: auto;
 		z-index: 111;
 		padding: 30rpx;
@@ -28,6 +28,29 @@
 			padding: 30rpx 0;
 			video {
 				width: 100%;
+			}
+		}
+		.example-section {
+			padding: 16rpx 0 0;
+			.example-item {
+				display: flex;
+				align-items: center;
+				padding: 12rpx 0;
+				&:active {
+					opacity: 0.6;
+				}
+				.example-label {
+					flex-shrink: 0;
+					font-size: 24rpx;
+					color: #ff5377;
+				}
+				.example-text {
+					font-size: 24rpx;
+					color: #999;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+				}
 			}
 		}
 		.result-tip {
