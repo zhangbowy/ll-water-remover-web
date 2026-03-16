@@ -20,6 +20,8 @@
 			padding: 30rpx 0;
 			display: flex;
 			justify-content: space-around;
+			flex-wrap: wrap;
+			gap: 20rpx;
 		}
 		.btn-share {
 			padding: 30rpx 0;
@@ -85,6 +87,105 @@
 					font-size: 22rpx;
 					text-align: center;
 					padding: 8rpx 0;
+				}
+			}
+		}
+	}
+}
+
+/* PC 端大屏优化样式（H5 有效） */
+@media screen and (min-width: 1024px) {
+	.more {
+		position: static;
+		width: 100%;
+		min-height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		background: linear-gradient(135deg, #f3f4f8 0%, #ffffff 40%, #ffe7ed 100%);
+
+		.all-back {
+			display: none;
+		}
+
+		.wrapper {
+			width: 960px;
+			max-width: 90%;
+			margin-top: 40px;
+			margin-bottom: 40px;
+			border-radius: 16px;
+			box-shadow: 0 18px 45px rgba(0, 0, 0, 0.06);
+			padding: 32px 40px 40px;
+			display: flex;
+			flex-direction: column;
+			background: radial-gradient(circle at top left, rgba(255, 162, 195, 0.15), transparent 55%), #ffffff;
+
+			.u-input,
+			.u-input__inner {
+				font-size: 14px !important;
+			}
+
+			.example-section {
+				margin-top: 8px;
+				border-radius: 8px;
+				background-color: #fafafa;
+				padding: 12px 16px 6px;
+
+				.example-item {
+					padding: 6px 0;
+					.example-label {
+						font-size: 13px;
+					}
+					.example-text {
+						font-size: 13px;
+					}
+				}
+			}
+
+			.btn-wrap {
+				justify-content: flex-start;
+				gap: 16px;
+				padding: 20px 0;
+
+				.u-btn {
+					min-width: 120px;
+					height: 36px;
+					line-height: 36px;
+					font-size: 14px;
+					border-radius: 999px;
+				}
+			}
+
+			.result-tip {
+				font-size: 14px;
+				color: #666;
+			}
+
+			.image-grid {
+				gap: 18px;
+				padding: 16px 0 8px;
+
+				.image-item {
+					width: calc(25% - 14px);
+					border-radius: 14px;
+
+					.thumb {
+						height: 190px;
+					}
+
+					.save-btn {
+						font-size: 12px;
+						padding: 6px 0;
+						letter-spacing: 1px;
+					}
+				}
+			}
+
+			.video-wrap {
+				padding-top: 12px;
+				video {
+					border-radius: 12px;
+					box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 				}
 			}
 		}

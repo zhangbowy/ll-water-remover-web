@@ -61,17 +61,12 @@
 		"selectedColor": "#ff5377",
 		"backgroundColor": "#fff",
 		"borderStyle": "white",
-		"list": [{
+		"list": [
+			{
 				"pagePath": "pages/watermark/index",
 				"text": "图片提取",
 				"iconPath": "static/tabBar/home.png",
 				"selectedIconPath": "static/tabBar/home_selected.png"
-			},
-			{
-				"pagePath": "pages/index/index",
-				"text": "头像挂件",
-				"iconPath": "static/tabBar/kefu.png",
-				"selectedIconPath": "static/tabBar/kefu_selected.png"
 			},
 			{
 				"pagePath": "pages/mine/mine",
